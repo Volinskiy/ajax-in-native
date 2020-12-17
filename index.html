@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="/data.json" id="formRequestData">
+    <input type="hidden" value="Данные для отправки на сервер" id="url">
+    <button
+      type="submit"
+      class="popup_open"
+      id="buttonOpenPopUp"
+      url-request="/data.json">
+      Открыть форму
+    </button>
+  </form>
+
+
+  <div class="pop-up display-none" id="jsPopUpAddNote">
+    <form class="pop-up__form jsFormAddNote" action="" name="formAddNote">
+      <h3 class="pop-up__header">Данные вашего аккаунта</h3>
+      <div class="pop-up__user-data">
+        <div class="pop-up__user-name">
+          <span>Ваше имя</span>
+          <span class="jsUserName"></span>
+        </div>
+        <div class="pop-up__balance">
+          <span>Ваш баланс</span>
+          <span class="jsBalance"></span>
+        </div>
+        <div class="pop-up__error-message display-none jsErrorMessage"></div>
+      </div>
+      <button class="button button--close pop-up__button-close" id="jsButtonClosePopUp" type="button"></button>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
